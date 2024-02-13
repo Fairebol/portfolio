@@ -16,7 +16,7 @@ import Badge from "./Badge.astro";
             <p class="text-zinc-200 text-md md:text-xl w-full py-2 [&>strong]:text-sky-300 [&>strong]:font-semibold">
                 +1 Años de Experiencia <strong>Técnico Informático</strong> de Argentina Santa Cruz <strong>Desarrollador Web Experimentado</strong> y Experiencia amplia en arquitecturas MVC. 
             </p>
-            <a href="/projects" class="w-[95%] border-cyan-300 border-2 p-2 my-8 md:w-full text-xl font-bold text-center hover:bg-cyan-300 hover:text-gray-900 focus:bg-cyan-300 focus:text-gray-900 transform duration-200"> MY PROJECTS </a>
+            <a href="/#projects" class="w-[95%] border-cyan-300 border-2 p-2 my-8 md:w-full text-xl font-bold text-center hover:bg-cyan-300 hover:text-gray-900 focus:bg-cyan-300 focus:text-gray-900 transform duration-200"> MY PROJECTS </a>
         </section>
         <section class="w-1/6 md:w-1/4 flex justify-center absolute right-10 md:right-32">
             <Badge>
@@ -25,9 +25,48 @@ import Badge from "./Badge.astro";
                 </a>
             </Badge>
         </section>
+        
     </div>
+    <section class="w-full flex justify-center md:hidden gap-x-4">
+        <Badge>
+            <svg class="size-4 m-0"
+                stroke="currentColor" 
+                fill="currentColor" 
+                stroke-width="2" 
+                viewBox="0 0 1024 1024"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M847.7 112H176.3c-35.5 0-64.3 28.8-64.3 64.3v671.4c0 35.5 28.8 64.3 64.3 64.3h671.4c35.5 0 64.3-28.8 64.3-64.3V176.3c0-35.5-28.8-64.3-64.3-64.3zm0 736c-447.8-.1-671.7-.2-671.7-.3.1-447.8.2-671.7.3-671.7 447.8.1 671.7.2 671.7.3-.1 447.8-.2 671.7-.3 671.7zM230.6 411.9h118.7v381.8H230.6zm59.4-52.2c37.9 0 68.8-30.8 68.8-68.8a68.8 68.8 0 1 0-137.6 0c-.1 38 30.7 68.8 68.8 68.8zm252.3 245.1c0-49.8 9.5-98 71.2-98 60.8 0 61.7 56.9 61.7 101.2v185.7h118.6V584.3c0-102.8-22.2-181.9-142.3-181.9-57.7 0-96.4 31.7-112.3 61.7h-1.6v-52.2H423.7v381.8h118.6V604.8z"></path>
+            </svg>
+            <a class="text-zinc-300 p-1" href="https://www.linkedin.com/in/facundo-romano-83a08324b/">
+                Linkedin
+            </a>
+        </Badge>
+        <Badge>
+            <svg  
+            class="size-4 icon icon-tabler icon-tabler-mail" 
+            width="24" 
+            height="24" 
+            viewBox="0 0 24 24" 
+            stroke-width="2" 
+            stroke="currentColor" 
+            fill="none" 
+            stroke-linecap="round" 
+            stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+                <path d="M3 7l9 6l9 -6" />
+            </svg>
+            <a class="text-zinc-300 p-1" href="https://www.linkedin.com/in/facundo-romano-83a08324b/">
+                Contactame
+            </a>
+        </Badge>
+    </section>
 
-    <div class="flex flex-col w-[90%] md:w-3/5 justify-center items-center mx-auto ml-[5%] gap-4 opacity-40">
+    <div class="flex flex-col w-[90%] md:w-3/5 justify-center items-center mx-auto ml-[5%] gap-4 opacity-40 my-4">
         <img src="/img/PL&Tech.svg" class="w-3/5">
         <img src="/img/technologies&frameworks.svg" class="w-1/2 items-start">
     </div>
