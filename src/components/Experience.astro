@@ -1,8 +1,32 @@
 ---
+import Titleh2 from "./Titleh2.astro";
+
+const EXPERIENCE = [
+    {
+        role: "Desarrollador Fullstack − Autodidacta",
+        time: "Actualmente...",
+        description: "Me esfuerzo día a día para aprender más y profundizar conocimientos realizando una ruta de aprendizaje",
+        more: "https://roadmap.sh/full-stack"
+    },
+    {
+        role: "Desarrollador Fullstack − EICO N°1",
+        time: "Septiembre 2023 - Diciembre 2023",
+        description: "En este lapso de tiempo desarollé un Anuario para el Instituto levantando Front-end y Back-end, haciendo mejoras de código y una base de datos capaz de almacenar 500 usuarios",
+        more: "https://github.com/Fairebol/eiconuario"
+    },
+    {
+        role: "Desarrollador Fullstack − EICO N°1",
+        time: "Abril 2023 - Noviembre 2023",
+        description: "El primer Proyecto a gran escala que obtuve, desarrolle el Back-end y El Front-end de un Inventario que debia ser capaz de almacenar +10k Objetos y debia tener roles asignados para cada puesto del instituto",
+        more: "https://github.com/Dalencco/inveicov1"
+    },
+]
+
 ---
 
-<div class="w-full md:3/5 mx-auto h-1/2 ">
-    <section class="md:mx-auto flex items-center mb-6 text-3xl font-semibold gap-x-3  justify-center text-black/80 dark:text-white md:m-auto md:w-3/5">
+
+<article class="section undefined w-full mx-auto container md:max-w-5xl">
+    <Titleh2 name="Experiencia">
         <svg class="size-8" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
             <path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path>
@@ -10,61 +34,31 @@
             <path d="M12 12l0 .01"></path>
             <path d="M3 13a20 20 0 0 0 18 0"></path>
         </svg>
-        <h2 class="font-semibold text-3xl">Experiencia</h2>
-    </section>
-
-    <article class=" section undefined w-full mx-auto container lg:max-w-3xl md:max-w-2xl">
-        <ol class="relative mt-16"> 
-            <li class=""> 
-                <div class="relative mx-12 pb-12 grid before:absolute before:left-[-25px] before:block before:h-full before:border-l-2 before:border-gray-200 dark:before:border-gray-800 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4 md:before:left-[-37px]"> 
-                    <div class="relative pb-12 md:col-span-2"> 
-                        <div class="sticky top-28"> 
-                            <svg class="dark:bg-teal-400 text-black  bg-sky-100 absolute left-[-38px] ring-1 ring-gray-700 rounded-full md:left-[-50px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28"><path fill-rule="evenodd" d="M15.5 11.75a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm1.444-.75a5.001 5.001 0 00-9.888 0H2.75a.75.75 0 100 1.5h4.306a5.001 5.001 0 009.888 0h4.306a.75.75 0 100-1.5h-4.306z" fill="currentColor"></path></svg> 
-                            <h3 class="text-xl font-bold text-gray-700 dark:text-gray-200">Desarrollador Fullstack − Autodidacta</h3> 
-                            <time class="p-0 m-0 text-sm text-gray-700 dark:text-gray-300">Actualmente...</time> 
-                        </div> 
+    </Titleh2>
+    
+    <ol class="relative"> 
+        { 
+        EXPERIENCE.map(({ role, time, description, more}) => (
+        <li class=""> 
+            <div class="relative mx-12 pb-12 grid before:absolute before:left-[-25px] before:block before:h-full before:border-l-2 before:border-gray-200 dark:before:border-gray-800 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4 md:before:left-[-37px]"> 
+                <div class="relative pb-6 md:pb-12 md:col-span-2"> 
+                    <div class="sticky top-28"> 
+                        <svg class="dark:bg-teal-400 text-black  bg-sky-100 absolute left-[-38px] ring-1 ring-gray-700 rounded-full md:left-[-50px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28"><path fill-rule="evenodd" d="M15.5 11.75a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm1.444-.75a5.001 5.001 0 00-9.888 0H2.75a.75.75 0 100 1.5h4.306a5.001 5.001 0 009.888 0h4.306a.75.75 0 100-1.5h-4.306z" fill="currentColor"></path></svg> 
+                        <h3 class="text-xl font-bold text-gray-700 dark:text-gray-200"> {role} </h3> 
+                        <time class="p-0 m-0 text-sm text-gray-700 dark:text-gray-300">{time}</time> 
                     </div> 
-                    <div class="relative flex flex-col gap-4 pb-4 text-gray-700 dark:text-gray-200 md:col-span-3"> Me esfuerzo día a día para aprender más y profundizar conocimientos realizando una ruta de aprendizaje
-                        <!-- <a href="https://twitch.tv/midudev" role="link" class="inline-flex items-center text-lg font-medium text-yellow-500 dark:text-yellow-200 dark:hover:text-yellow-300 hover:text-yellow-700"> 
-                            Saber más <svg xmlns="http://www.w3.org/2000/svg" class="w-5 icon icon-tabler icon-tabler-chevron-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 6l6 6l-6 6"></path></svg>  
-                        </a>  -->
-                    </div>
                 </div> 
-            </li>
-            
-            <li class=""> 
-                <div class="relative mx-12 pb-12 grid before:absolute before:left-[-25px] before:block before:h-full before:border-l-2 before:border-gray-200 dark:before:border-gray-800 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4 md:before:left-[-37px]"> 
-                    <div class="relative pb-12 md:col-span-2"> 
-                        <div class="sticky top-28"> 
-                            <svg class="dark:bg-teal-300 text-black bg-gray-100 absolute left-[-38px] ring-1 dark:ring-gray-700 ring-gray-200 rounded-full md:left-[-50px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28"><path fill-rule="evenodd" d="M15.5 11.75a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm1.444-.75a5.001 5.001 0 00-9.888 0H2.75a.75.75 0 100 1.5h4.306a5.001 5.001 0 009.888 0h4.306a.75.75 0 100-1.5h-4.306z" fill="currentColor"></path></svg> 
-                            <h3 class="text-xl font-bold text-gray-700 dark:text-gray-200">Desarrollador Fullstack − EICO N°1</h3> 
-                            <time class="p-0 m-0 text-sm text-gray-700 dark:text-gray-300">Septiembre 2023 - Diciembre 2023</time> 
-                        </div> 
-                    </div> 
-                    <div class="relative flex flex-col gap-4 pb-4 text-gray-700 dark:text-gray-300 md:col-span-3"> En este lapso de tiempo desarollé un Anuario para el Instituto levantando Front-end y Back-end, haciendo mejoras de código y una base de datos capaz de almacenar 500 usuarios
-                        <a href="https://github.com/Fairebol/eiconuario" target="_blank" role="link" class="inline-flex items-center text-lg font-medium text-yellow-500 dark:text-yellow-200 dark:hover:text-yellow-300 hover:text-yellow-700"> 
-                            Saber más <svg xmlns="http://www.w3.org/2000/svg" class="w-5 icon icon-tabler icon-tabler-chevron-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 6l6 6l-6 6"></path></svg>  
-                        </a> 
-                    </div>
-                </div> 
-            </li>
-            <li class=""> 
-                <div class="relative mx-12 pb-12 grid before:absolute before:left-[-25px] before:block before:h-full before:border-l-2 before:border-gray-200 dark:before:border-gray-800 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4 md:before:left-[-37px]"> 
-                    <div class="relative pb-12 md:col-span-2"> 
-                        <div class="sticky top-28"> 
-                            <svg class="dark:bg-teal-100 text-black bg-gray-100 absolute left-[-38px] ring-1 dark:ring-gray-700 ring-gray-200 rounded-full md:left-[-50px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28"><path fill-rule="evenodd" d="M15.5 11.75a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0zm1.444-.75a5.001 5.001 0 00-9.888 0H2.75a.75.75 0 100 1.5h4.306a5.001 5.001 0 009.888 0h4.306a.75.75 0 100-1.5h-4.306z" fill="currentColor"></path></svg> 
-                            <h3 class="text-xl font-bold text-gray-700 dark:text-gray-200">Desarrollador Fullstack − EICO N°1</h3> 
-                            <time class="p-0 m-0 text-sm text-gray-700 dark:text-gray-300">Abril 2023 - Noviembre 2023</time> 
-                        </div> 
-                    </div> 
-                    <div class="relative flex flex-col gap-4 pb-4 text-gray-700 dark:text-gray-300 md:col-span-3"> El primer Proyecto a gran escala que obtuve, desarrolle el Back-end y El Front-end de un Inventario que debia ser capaz de almacenar +10k Objetos y debia tener roles asignados para cada puesto del instituto
-                        <a href="https://github.com/Dalencco/inveicov1" target="_blank" role="link" class="inline-flex items-center text-lg font-medium text-yellow-500 dark:text-yellow-200 dark:hover:text-yellow-300 hover:text-yellow-700"> 
-                            Saber más <svg xmlns="http://www.w3.org/2000/svg" class="w-5 icon icon-tabler icon-tabler-chevron-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 6l6 6l-6 6"></path></svg>  
-                        </a> 
-                    </div>
-                </div> 
-            </li>
+                <div class="relative flex flex-col gap-2 md:gap-4 pb-4 text-gray-700 dark:text-gray-200 md:col-span-3"> {description}
+                    {more &&
+                        <a href={more} target="_blank" role="link" class="inline-flex items-center text-lg font-medium text-cyan-400 dark:text-cyan-300 dark:hover:text-teal-400 hover:text-teal-400"> 
+                        Saber más <svg xmlns="http://www.w3.org/2000/svg" class="w-5 icon icon-tabler icon-tabler-chevron-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 6l6 6l-6 6"></path></svg>  
+                    </a> 
+                    }
+                </div>
+            </div> 
+        </li>
+        ))
+        }
         </ol>
 
-    </article>
-</div>
+</article>

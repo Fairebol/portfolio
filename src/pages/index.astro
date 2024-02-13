@@ -1,19 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+import AboutMe from '../components/AboutMe.astro';
 import Projects from '../components/Projects.astro';
 import Header from '../components/Header.astro';
-import ButtonFeatures from '../components/ButtonFeatures.astro';
-import ViewTransitions from 'astro/components/ViewTransitions.astro.jsx';
 import Contacts from '../components/Contacts.astro';
 import Maincontent from '../components/Maincontent.astro';
 import Experience from '../components/Experience.astro';
+
 ---
 
 <Layout title="FARomano Dev Portfolio">
 	<Header />
 	<Contacts />
 	<Maincontent />
-	<Experience />
-	<Projects />
+	<div class="w-full mx-auto h-1/2 px-4">
+		<Experience />
+		<Projects />
+		<AboutMe />
+	</div>
 </Layout>

@@ -1,0 +1,8 @@
+---
+const { name } = Astro.props
+const { id } = Astro.props
+---
+<section id={id} class=" flex items-center my-10 text-3xl font-semibold gap-x-3 justify-normal text-black/80 dark:text-white">
+    <slot />
+    <h2 class="font-semibold text-3xl">{ name }</h2>
+</section>
