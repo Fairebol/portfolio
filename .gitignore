@@ -23,4 +23,6 @@ pnpm-debug.log*
 # Curriculum folder
 CV
 
+# Mailer logic cointains sensible info
+Mailerlogic.astro
 

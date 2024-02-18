@@ -1,0 +1,15 @@
+---
+
+const { placeholder } = Astro.props
+const { name } = Astro.props
+const { subname } = Astro.props
+const { type } = Astro.props || "text"
+const { id } = Astro.props 
+const { inputname } = Astro.props 
+const { required } = Astro.props || false
+
+---
+<div class=" w-full text-start items-center [&>h2>p]:text-cyan-500 [&>h2>p]:text-lg relative group">
+    <h2 class="text-xl flex flex-row gap-x-2 my-1 font-semibold [&>p]:font-normal"> {name} <p>{subname}</p> </h2>
+    <input {required} && (required) id={id} name={inputname} class="w-full p-2 focus:rounded-lg border-2 border-transparent border-b-teal-400 focus:border-2 focus:border-teal-300 bg-transparent appearance-none focus:outline-none transform duration-200" type={type} placeholder={placeholder} autocomplete="off">
+</div>
